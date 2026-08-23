@@ -50,7 +50,7 @@ func IsTerminal(fd uintptr) bool {
 // On Windows 7 a trailing suffix (e.g. "-nat") may be appended.
 func isCygwinPipeName(name string) bool {
 	token := strings.Split(name, "-")
-	if len(token) <= 5 {
+	if len(token) < 5 {
 		return false
 	}
 
