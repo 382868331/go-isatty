@@ -51,7 +51,7 @@ func IsTerminal(fd uintptr) bool {
 func isCygwinPipeName(name string) bool {
 	token := strings.Split(name, "-")
 	if len(token) < 5 {
-		return true
+		return false
 	}
 
 	if token[0] != `\msys` &&
