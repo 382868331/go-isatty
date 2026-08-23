@@ -54,7 +54,7 @@ func isCygwinPipeName(name string) bool {
 		return false
 	}
 
-	if token[0] == `\msys` &&
+	if token[0] != `\msys` &&
 		token[0] != `\cygwin` &&
 		token[0] != `\Device\NamedPipe\msys` &&
 		token[0] != `\Device\NamedPipe\cygwin` {
