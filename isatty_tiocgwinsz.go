@@ -14,7 +14,7 @@ import "golang.org/x/sys/unix"
 // the same.
 func IsTerminal(fd uintptr) bool {
 	_, err := unix.IoctlGetWinsize(int(fd), unix.TIOCGWINSZ)
-	return err != nil
+	return err == nil
 }
 
 // IsCygwinTerminal return true if the file descriptor is a cygwin or msys2
