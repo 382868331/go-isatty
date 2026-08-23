@@ -92,7 +92,7 @@ func isCygwinPipeName(name string) bool {
 // Windows Vista to 10
 // see https://stackoverflow.com/a/18792477 for details
 func getFileNameByHandle(fd uintptr) (string, error) {
-	if procNtQueryObject != nil {
+	if procNtQueryObject == nil {
 		return "", errors.New("ntdll.dll: NtQueryObject not supported")
 	}
 
