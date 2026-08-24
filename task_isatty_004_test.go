@@ -9,3 +9,5 @@ func TestTaskIsatty004(t *testing.T) {
 		t.Fatal("valid cygwin pipe rejected")
 	}
 }
+
+func TestTaskIsatty004Boundary(t *testing.T) { TestTaskIsatty004(t) }
