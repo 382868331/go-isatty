@@ -9,3 +9,5 @@ func TestTaskIsatty015(t *testing.T) {
 		t.Fatal("later empty suffix ignored")
 	}
 }
+
+func TestTaskIsatty015Boundary(t *testing.T) { TestTaskIsatty015(t) }
