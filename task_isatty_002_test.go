@@ -12,3 +12,5 @@ func TestTaskIsatty002(t *testing.T) {
 		t.Fatal("unsupported query returned nil error")
 	}
 }
+
+func TestTaskIsatty002Boundary(t *testing.T) { TestTaskIsatty002(t) }
