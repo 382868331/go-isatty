@@ -9,3 +9,5 @@ func TestTaskIsatty010(t *testing.T) {
 		t.Fatal("invalid direction accepted")
 	}
 }
+
+func TestTaskIsatty010Boundary(t *testing.T) { TestTaskIsatty010(t) }
