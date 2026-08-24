@@ -9,3 +9,5 @@ func TestTaskIsatty003(t *testing.T) {
 		t.Fatal("valid msys pipe rejected")
 	}
 }
+
+func TestTaskIsatty003Boundary(t *testing.T) { TestTaskIsatty003(t) }
