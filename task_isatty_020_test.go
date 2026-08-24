@@ -9,3 +9,10 @@ func TestTaskIsatty020(t *testing.T) {
 		t.Fatal("mutated sandbox behavior not observable")
 	}
 }
+
+func TestTaskIsatty020Boundary(t *testing.T) {
+	TestTaskIsatty020(t)
+	if t.Failed() {
+		t.FailNow()
+	}
+}
