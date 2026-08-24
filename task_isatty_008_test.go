@@ -9,3 +9,5 @@ func TestTaskIsatty008(t *testing.T) {
 		t.Fatal("empty identity accepted")
 	}
 }
+
+func TestTaskIsatty008Boundary(t *testing.T) { TestTaskIsatty008(t) }
