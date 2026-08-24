@@ -9,3 +9,5 @@ func TestTaskIsatty005(t *testing.T) {
 		t.Fatal("device msys pipe rejected")
 	}
 }
+
+func TestTaskIsatty005Boundary(t *testing.T) { TestTaskIsatty005(t) }
