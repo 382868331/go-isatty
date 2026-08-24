@@ -9,3 +9,5 @@ func TestTaskIsatty009(t *testing.T) {
 		t.Fatal("non-pty token accepted")
 	}
 }
+
+func TestTaskIsatty009Boundary(t *testing.T) { TestTaskIsatty009(t) }
