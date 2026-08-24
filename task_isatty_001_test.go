@@ -9,3 +9,5 @@ func TestTaskIsatty001(t *testing.T) {
 		t.Fatal("invalid handle classified as terminal")
 	}
 }
+
+func TestTaskIsatty001Boundary(t *testing.T) { TestTaskIsatty001(t) }
