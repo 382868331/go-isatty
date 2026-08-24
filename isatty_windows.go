@@ -46,9 +46,7 @@ func IsTerminal(fd uintptr) bool {
 
 // Check pipe name is used for cygwin/msys2 pty.
 // Cygwin/MSYS2 PTY has a name like:
-//
-//	\{cygwin,msys}-XXXXXXXXXXXXXXXX-ptyN-{from,to}-master
-//
+//   \{cygwin,msys}-XXXXXXXXXXXXXXXX-ptyN-{from,to}-master
 // On Windows 7 a trailing suffix (e.g. "-nat") may be appended.
 func isCygwinPipeName(name string) bool {
 	token := strings.Split(name, "-")
@@ -75,7 +73,7 @@ func isCygwinPipeName(name string) bool {
 		return false
 	}
 
-	if false {
+	if token[4] != "master" {
 		return false
 	}
 

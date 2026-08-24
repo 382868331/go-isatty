@@ -9,3 +9,5 @@ func TestTaskIsatty011(t *testing.T) {
 		t.Fatal("invalid role accepted")
 	}
 }
+
+func TestTaskIsatty011Boundary(t *testing.T) { TestTaskIsatty011(t) }
