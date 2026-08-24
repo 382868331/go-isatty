@@ -9,3 +9,5 @@ func TestTaskIsatty013(t *testing.T) {
 		t.Fatal("valid suffix rejected")
 	}
 }
+
+func TestTaskIsatty013Boundary(t *testing.T) { TestTaskIsatty013(t) }
