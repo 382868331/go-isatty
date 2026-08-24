@@ -9,3 +9,5 @@ func TestTaskIsatty007(t *testing.T) {
 		t.Fatal("unrelated pipe accepted")
 	}
 }
+
+func TestTaskIsatty007Boundary(t *testing.T) { TestTaskIsatty007(t) }
