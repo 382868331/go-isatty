@@ -9,3 +9,5 @@ func TestTaskIsatty014(t *testing.T) {
 		t.Fatal("canonical five-token pipe rejected")
 	}
 }
+
+func TestTaskIsatty014Boundary(t *testing.T) { TestTaskIsatty014(t) }
